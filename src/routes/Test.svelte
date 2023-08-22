@@ -1,5 +1,5 @@
-<script lang="ts">
-	type $$Props = {
+<script context="module" lang="ts">
+	type Props = {
 		name: string;
 	} & (
 		| { color?: 'red' }
@@ -8,6 +8,10 @@
 				uniqueProp?: string;
 		  }
 	);
+</script>
+
+<script lang="ts">
+	type $$Props = Props;
 	export let name: $$Props['name'];
 	export let color: $$Props['color'];
 	export let uniqueProp: $$Props['uniqueProp'];
